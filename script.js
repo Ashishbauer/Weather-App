@@ -14,7 +14,7 @@ const weatherResult = document.querySelector("#weatherResult");
         console.log(weatherData);
 
         document.querySelector(".cityName").innerHTML = "City: " + weatherData.name;
-        document.querySelector(".temp").innerHTML = "Temperature: " + weatherData.main.temp + " Celsius";
+        document.querySelector(".temp").innerHTML = "Temperature: " + Math.round(weatherData.main.temp - 273.15) + " Celsius";
         document.querySelector(".description").innerHTML = "Weather: " + weatherData.weather[0].description;
         document.querySelector(".humidity").innerHTML = "Humidity: " + weatherData.main.humidity + "%";
         document.querySelector(".windSpeed").innerHTML = "Wind Speed: " + weatherData.wind.speed + " km/h";
